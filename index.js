@@ -21,10 +21,10 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
 //Detecting touch
 
 for (var i=0; i<numberOfDrumButtons; i++) {
-  document.querySelectorAll(".drum")[i].addEventListener("touchend", function () {
+  document.querySelectorAll(".drum")[i].addEventListener("touchstart", function(event) {
     var buttonHTML = this.innerHTML;
-    makeSound(buttonHTML);
-    buttonAnimation(buttonHTML);
+    makeSound(event.buttonHTML);
+    buttonAnimation(event.buttonHTML);
   });
 }
 
