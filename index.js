@@ -18,6 +18,19 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
 }
 
 
+//Detecting touch
+
+for (var i=0; i<numberOfDrumButtons; i++) {
+  document.querySelectorAll(".drum")[i].addEventListener("touchstart", function () {
+    var buttonHTML = this.innerHTML;
+    makeSound(buttonHTML);
+    buttonAnimation(buttonHTML);
+  });
+}
+
+
+
+
 //Detecting keyboard press
 
 document.addEventListener("keydown", function(event) {
